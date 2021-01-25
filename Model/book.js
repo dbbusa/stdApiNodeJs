@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const schema =mongoose.Schema({
+const schema = mongoose.Schema({
     name:String,
     qty:Number
 });
-module.exports = mongoose.model("Book");
+module.exports = mongoose.model("Book",schema);
