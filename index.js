@@ -9,7 +9,7 @@ mongoose.connect("mongodb+srv://user1:apstndp16@cluster0.vqjzb.mongodb.net/stude
         app.use("/api",route);
         app.use(bodyParser.urlencoded({extended: true}));
         app.use(express.json());
-        app.listen(3000,()=>{
+        app.listen(process.env.PORT || 3000,()=>{
             console.log("Server Started on 3000 !!");
         });
     }
