@@ -35,6 +35,6 @@ jobs:
         image: ${{ secrets.IMAGE_NAME }}/${{ secrets.IMAGE_TAG }}
         tags: v1, latest
         registry: registry-url.io
-        dockerfile: Dockerfile.ci
+        dockerfile: Dockerfile
         username: ${{ secrets.REGISTRY_PASS }}
         password: ${{ secrets.DOCKER_PASSWORD }}
