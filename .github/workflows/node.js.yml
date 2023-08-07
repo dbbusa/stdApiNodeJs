@@ -32,9 +32,9 @@ jobs:
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: IMAGE_NAME/IMAGE_TAG
+        image: ${{ secrets.IMAGE_NAME }}/${{ secrets.IMAGE_TAG }}
         tags: v1, latest
         registry: registry-url.io
         dockerfile: Dockerfile.ci
         username: ${{ secrets.REGISTRY_PASS }}
-        Tpassword: ${{ secrets.DOCKER_PASSWORD }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
