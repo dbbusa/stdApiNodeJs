@@ -34,7 +34,7 @@ jobs:
       with:
         image: ${{ secrets.IMAGE_NAME }}/${{ secrets.IMAGE_TAG }}
         tags: v1, latest
-        registry: registry-url.io
+        registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.REGISTRY_USER }}
         password: ${{ secrets.REGISTRY_PASS }}
